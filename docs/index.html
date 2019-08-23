@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .btn{
+        border: 2px solid black;
+        border-radius: 10px;
+        background-color: transparent;
+        color: black;
+        padding: 14px 28px;
+        font-size: 40px;
+        cursor: pointer;
+    }
+    .go {
+        border-color: #4CAF50;
+        color: green;
+    }
+
+    .go:hover {
+        background-color: #4CAF50;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js">
+        <div id="banner">
+            <h1>I am a</h1><h1 id="typed"></h1>
+        </div>
+        <div id="start">
+            <a href="reveal.js-3.8.0/index.html"><button class="btn go">Get Started &raquo</button></a>
+        </div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+        <script type="text/javascript" src="writer.js"></script>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function() {
+        console.log('callback - particles.js config loaded');
+        });
+    </script>
+</body>
+</html>
