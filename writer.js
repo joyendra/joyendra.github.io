@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     var typed = new Typed('#typed', {
 
-        strings: ['<strong>Developer...</strong>', '<strong>Hackathon Freak...</strong>', '<strong>Tech Enthusiast...</strong>', '<strong>Debater...</strong>', '<strong>Photographer...</strong>', '<strong>Lot More...</strong>'],
+        strings: ['<strong>a Developer...</strong>', '<strong>a Hackathon Freak...</strong>', '<strong>a Tech Enthusiast...</strong>', '<strong>a Debater...</strong>', '<strong>a Photographer...</strong>', '<strong>more than just a name</strong>'],
         typeSpeed: 100,
         backSpeed: 100,
         fadeOut: false,
