@@ -31,7 +31,7 @@ function getjoke(){
         });
 
         }).catch(function(err) {
-            console.log('Fetch Error :-S', err);
+            joke.innerHTML =`Fetch Error, check your Internet Connection`;
         });
 }
 
