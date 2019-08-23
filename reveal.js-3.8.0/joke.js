@@ -11,8 +11,7 @@ function getjoke(){
         if(clickCount <= 0){
             counter.innerHTML = `<p></p>`;
             joke.innerHTML = `<img src="./imgs/joke.gif"></img>`;
-            jokeBTN.innerHTML = `<p style="font-size: 18px">Nothing interesting left here, you just saw a weird API handling flex stunt. Let's go back up again. PRO TIP: Swipe left to move right or just press right.</p>
-            <p style="font-size: 14px">PS: Got angry? I tend to do so. I'm a debater afterall.</p>`;
+            jokeBTN.innerHTML = `<p></p>`;
         }
     }
     clickCount -= 1;
