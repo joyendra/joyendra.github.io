@@ -1,0 +1,456 @@
+* {
+    font-family: 'Press Start 2P', cursive !important;
+}
+
+body {
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    margin: 0;
+    padding: 0;
+}
+
+#particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 600;
+    color: #ff6f61;
+}
+
+.lead {
+    font-weight: 400;
+    color: #bbb;
+}
+
+/* Main Container */
+.donation-section,
+.thank-you-section {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container-main {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    max-width: 1200px;
+    align-items: flex-start;
+}
+
+.main-content {
+    flex: 2;
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.thank-you-content {
+    flex: 2;
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.thank-you-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Liquid Progress Indicator */
+.progress-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 !important;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+}
+
+.liquid-progress {
+    width: 160px;
+    height: 160px;
+    display: block;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+#wave {
+    fill: url(#grad1);
+}
+
+#progress-text {
+    pointer-events: none;
+    font-weight: bold;
+}
+
+/* Donation Display */
+#donation-display {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff6f61;
+    margin: 20px 0;
+}
+
+/* Donation Buttons */
+.donation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: scale(1);
+}
+
+.hidden {
+    display: none;
+}
+
+.custom-donation {
+    margin: 20px 0;
+}
+
+.qr-section {
+    margin-top: 20px;
+}
+
+.qr-section img {
+    max-width: 200px;
+}
+
+/* Notification Styles */
+#notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#notification.show {
+    display: flex;
+}
+
+#notification:not(.hidden) {
+    display: flex;
+}
+
+.notification-content {
+    text-align: center;
+    color: #fff;
+}
+
+.notification-content h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* QR Modal Styles */
+.qr-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    animation: fadeIn 0.3s ease;
+}
+
+.qr-modal-content {
+    background: #1e1e1e;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    max-width: 400px;
+    max-height: fit-content;
+    animation: slideUp 0.3s ease;
+}
+
+.qr-modal-content h2 {
+    color: #ff6f61;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.qr-modal-content p {
+    color: #bbb;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+.qr-modal-image {
+    width: 100%;
+    max-width: 150px;         
+    height: auto;
+    margin: 10px auto;
+    border: 2px solid #fff;
+    padding: 5px;
+    background: #fff;
+}
+
+.qr-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #ff6f61;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.qr-modal-close:hover {
+    transform: scale(1.2);
+}
+
+/* Confetti */
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: hsl(calc(360 * var(--hue)), 100%, 50%);
+    border-radius: 50%;
+}
+
+/* Patrons Section */
+.patrons-section {
+    flex: 1;
+    background: #1e1e1e;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    height: fit-content;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.patrons-section h3 {
+    color: #ff6f61;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.patrons-section p {
+    margin: 0 0 15px 0;
+    color: #fff;
+}
+
+.patrons-list p {
+    color: #fff;
+}
+
+.patron-names {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.patron-badge {
+    background: linear-gradient(135deg, #ff6f61, #ff8c42);
+    padding: 8px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(255, 111, 97, 0.3);
+    animation: slideInPatron 0.5s ease-out;
+    font-size: 0.9rem;
+}
+
+.patron-name {
+    color: #fff;
+    font-weight: 500;
+}
+
+@keyframes slideInPatron {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* QR Modal - Add input styling */
+#patron-name-input {
+    background-color: #333;
+    border: 1px solid #ff6f61;
+    color: #fff;
+}
+
+#patron-name-input::placeholder {
+    color: #999;
+}
+
+#patron-name-input:focus {
+    background-color: #333;
+    border-color: #ff8c42;
+    color: #fff;
+    box-shadow: 0 0 0 0.2rem rgba(255, 111, 97, 0.25);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container-main {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .main-content,
+    .thank-you-content {
+        flex: 1;
+    }
+
+    .patrons-section {
+        max-height: 300px;
+    }
+
+    .thank-you-content h1 {
+        font-size: 2rem;
+    }
+}
+
+/* --- CRT MONITOR EFFECT --- */
+body::after {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* Creates the horizontal scanlines */
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+    z-index: 999; /* Sits on top of everything but allows clicks through */
+    background-size: 100% 3px, 3px 100%;
+    pointer-events: none;
+  }
+  
+  /* Adds a very subtle screen flicker */
+  @keyframes crt-flicker {
+    0% { opacity: 0.98; }
+    50% { opacity: 1; }
+    100% { opacity: 0.99; }
+  }
+  
+  body {
+    animation: crt-flicker 0.15s infinite;
+  }
+
+  /* Update your existing container classes */
+.main-content, .patrons-section {
+    border: 4px solid #fff !important;
+    box-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.2), 
+        8px 8px 0px #ff6f61 !important; /* Classic 8-bit offset shadow */
+    image-rendering: pixelated; /* Ensures edges stay sharp */
+}
+
+/* Style the buttons to look like arcade buttons */
+.btn {
+    border-radius: 0 !important;
+    border: 3px solid #fff !important;
+    box-shadow: 4px 4px 0px #000 !important;
+    text-transform: uppercase;
+}
+
+.btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #000 !important;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Joy's Bday Quest</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/landing.css">
+</head>
+<body>
+    <div class="crt-overlay"></div>
+    <canvas id="particle-canvas"></canvas>
+
+    <div class="hero-container">
+        <div class="glitch-wrapper">
+            <h1 class="main-title" data-text="JOY'S BDAY QUEST">JOY'S BDAY QUEST</h1>
+        </div>
+        
+        <div class="stats-row">
+            <span>PLAYER 1: JOY</span>
+            <span class="blink">SCORE: 000000</span>
+        </div>
+
+        <div class="start-container">
+            <a href="main.html" class="start-btn">PRESS START</a>
+        </div>
+
+        <div class="footer-text">
+            © 198X JOYLAB INDUSTRIES
+        </div>
+    </div>
+
+    <script src="assets/js/particles.js"></script>
+    <script>
+        // Simple 8-bit sound effect placeholder
+        document.querySelector('.start-btn').addEventListener('click', function(e) {
+            // You can add a 'coin-up' sound here if you have an mp3
+            console.log("Game Loading...");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joy's Birthday Fund</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Liquid Progress Indicator -->
+    <link rel="stylesheet" href="https://www.cssscript.com/demo/liquid-progress-indicator/css/liquid-progress-indicator.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-dark text-light">
+    <canvas id="particle-canvas"></canvas>
+    
+    <div class="donation-section">
+        <div class="container-main">
+            <!-- Main Content -->
+            <div class="main-content">
+                <h1 id="main-heading" class="mb-4">🎉 Joy's Birthday Fund 🎉</h1>
+                <p id="subheading" class="lead">We're trying to get Joy a discount on the Dwarf 3 Telescope!</p>
+                <a href="https://dwarflab.com/products/dwarf-3-smart-telescope?srsltid=AfmBOoreYeskW-AA_i4WuBfdXi2HyKxlWKDPhIYsqemRsD8SUoQy5Uij" target="_blank">
+                    <img src="https://astrobackyard.com/wp-content/uploads/2024/11/dwarf3-smart-telescope-review.jpg" alt="Dwarf 3 Telescope" class="img-fluid my-4 shadow-lg rounded" style="max-width: 300px;">
+                </a>
+                
+                <div class="progress-section my-4">
+                    <svg class="liquid-progress" id="liquid-progress" viewBox="0 0 160 160" width="160" height="160">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#8d6e63;stop-opacity:1"></stop>
+                                <stop offset="100%" style="stop-color:#3e2723;stop-opacity:1"></stop>
+                            </linearGradient>
+                            <clipPath id="clip">
+                                <path id="wave" fill="url(#grad1)"></path>
+                            </clipPath>
+                        </defs>
+                        <circle cx="80" cy="80" r="75" fill="none" stroke="#333" stroke-width="2"></circle>
+                        <circle cx="80" cy="80" r="75" fill="url(#grad1)" clip-path="url(#clip)"></circle>
+                        <text id="progress-text" x="80" y="85" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">0%</text>
+                    </svg>
+                </div>
+                
+                <p id="donation-display" class="mt-2" style="font-size: 1.2rem; font-weight: bold; color: #ff6f61;">You want to donate: $0</p>
+                
+                <div class="donation-buttons mb-4">
+                    <button class="btn btn-primary donate-btn" data-amount="1">$1</button>
+                    <button class="btn btn-primary donate-btn" data-amount="5">$5</button>
+                    <button class="btn btn-primary donate-btn" data-amount="10">$10</button>
+                    <button class="btn btn-primary donate-btn" data-amount="50">$50</button>
+                    <button id="other-btn" class="btn btn-secondary">Other</button>
+                </div>
+                
+                <div class="custom-donation mb-4 hidden">
+                    <input type="number" id="custom-amount" placeholder="Enter custom amount" min="1" class="form-control mb-2">
+                    <button id="custom-submit" class="btn btn-success mt-2" disabled>Submit</button>
+                </div>
+                
+                <button id="hit-it-btn" class="btn btn-danger mt-4" disabled>Hit it!</button>
+            </div>
+
+            <!-- Patrons Section -->
+            <div class="patrons-section">
+                <h3 class="mb-4">✨ Patrons ✨</h3>
+                <p class="text-white mb-3 small">Thank you to everyone supporting Joy's dream!</p>
+                <div class="patrons-list" id="patrons-list">
+                    <p class="text-white small">No patrons yet. Be the first to donate!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thank You Section (Hidden Initially) -->
+    <div id="thank-you-section" class="thank-you-section hidden">
+        <div class="container-main">
+            <!-- Thank You Content -->
+            <div class="thank-you-content">
+                <h1>Thank You! 🎉</h1>
+                <p class="lead">Check back later to see the updated goal.</p>
+                <p class="lead">Come again to support Joy!</p>
+            </div>
+
+            <!-- Patrons Section -->
+            <div class="patrons-section">
+                <h3 class="mb-4">✨ Patrons ✨</h3>
+                <p class="text-white mb-3 small">Thank you to everyone supporting Joy's dream!</p>
+                <div class="patrons-list-thank-you" id="patrons-list-thank-you">
+                    <p class="text-white small">No patrons yet. Be the first to donate!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Notification Modal -->
+    <div id="notification" class="hidden">
+        <div class="notification-content">
+            <h2 id="notification-message"></h2>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://www.cssscript.com/demo/liquid-progress-indicator/js/liquid-progress-indicator.min.js"></script>
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/animations.js" type="module"></script>
+    <script src="assets/js/progressBar.js" type="module"></script>
+    <script src="assets/js/app.js" type="module"></script>
+</body>
+</html>
