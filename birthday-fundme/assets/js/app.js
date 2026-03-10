@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const patronsListThankYou = document.getElementById('patrons-list-thank-you');
 
     let totalDonated = 0;
-    let patrons = JSON.parse(localStorage.getItem('patrons')) || [];
+    let patrons = [{ name: 'Siddharth', date: new Date().toLocaleDateString() },
+    { name: 'Urvika', date: new Date().toLocaleDateString() }];
 
     // Initially hide the custom donation section and show donation display
     customDonationSection.classList.add('hidden');
