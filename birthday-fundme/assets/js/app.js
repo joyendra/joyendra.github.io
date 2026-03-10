@@ -18,7 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let totalDonated = 0;
     let patrons = [{ name: 'Siddharth', date: new Date().toLocaleDateString() },
-    { name: 'Urvika', date: new Date().toLocaleDateString() }];
+    { name: 'Urvika', date: new Date().toLocaleDateString() },
+    { name: 'Vridhi', date: new Date().toLocaleDateString() }
+];
 
     // Initially hide the custom donation section and show donation display
     customDonationSection.classList.add('hidden');
