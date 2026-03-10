@@ -23,11 +23,11 @@ function triggerAnimation(amount) {
 
 function showFunnyAnimation(amount) {
     const messages = {
-        1: `Thanks for the candy money! 🍬<img src="https://c8.alamy.com/comp/2T2J6Y4/candy-cartoon-icon-vector-illustration-of-candy-isolated-on-white-background-candy-icon-for-web-mobile-app-promo-vector-illustration-2T2J6Y4.jpg" alt="Candy" style="max-width: 200px; display: block; margin: 10px auto;">`,
-        5: `Thanks for the coffee money! ☕<img src="https://i.etsystatic.com/40533556/r/il/0c9678/5570064193/il_fullxfull.5570064193_s3wi.jpg" alt="Coffee" style="max-width: 200px; display: block; margin: 10px auto;">`,
-        10: `Thanks for the chicken-over-rice money! 🍛<img src="https://platform.ny.eater.com/wp-content/uploads/sites/6/chorus/uploads/chorus_asset/file/25984340/RMMY_S1_FG_01081801_Still192_3000.jpg?quality=90&strip=all&crop=0%2C10.747415390477%2C100%2C78.505169219047&w=1200" alt="Chicken over rice" style="max-width: 200px; display: block; margin: 10px auto;">`,
-        50: `Thanks for the pizza party money! 🍕<img src="https://twinkletwinklelittleone.com/cdn/shop/products/PizzaParty_FingerPuppetBoardBook1.jpg?v=1656538349&width=2100" alt="Pizza" style="max-width: 200px; display: block; margin: 10px auto;">`,
-        other: `Oooh secret! 🎁<img src="https://stock.adobe.com/images/cartoon-gift-box-surprise-present-with-ribbon-and-bow-festive-package-with-confetti-greeting-card-birthday-and-christmas-celebration-secret-wrapped-container-isolated-vector-illustration/681251096?as_campaign=ft_confirmation&as_content=stock.adobe.com/en/images&as_audience=srp&tduid=2c3f0e8f4a2de9f0b9a4ef0f8d3d3b70&as_channel=affiliate&as_campclass=redirect&as_source=arvato" alt="Secret gift" style="max-width: 200px; display: block; margin: 10px auto;">`
+        1: `Thanks for the PolarPop money! 🥤<img src="https://img.cdn4dd.com/cdn-cgi/image/fit=contain,width=1200,height=672,format=auto/https://doordash-static.s3.amazonaws.com/media/photosV2/b7055bc9-4ba5-4f4d-ae6f-b53d4fb22bc7-retina-large.png" alt="Candy" style="max-width: 200px; display: block; margin: 10px auto;">`,
+        5: `Thanks for the starbucks money! ☕<img src="https://cloudassets.starbucks.com/is/image/sbuxcorp/IcedCaramelBruleeLatte?impolicy=1by1_wide_topcrop_630&crop=180,360,1440,1440&wid=630&hei=630&qlt=85" alt="Coffee" style="max-width: 200px; display: block; margin: 10px auto;">`,
+        10: `Thanks for the chicken-over-rice money! 🍛<img src="https://halaladdict.com/wp-content/uploads/2023/04/WhatsApp-Image-2023-05-11-at-4.38.51-PM.jpeg" alt="Chicken over rice" style="max-width: 200px; display: block; margin: 10px auto;">`,
+        50: `Thanks for the pizza party money! 🍕<img src="https://media.gettyimages.com/id/1297246932/photo/different-tipes-of-pizza.jpg?b=1&s=2048x2048&w=0&k=20&c=JheyUJeAYlUb3BY3DF4tKIhaBlncojqhucOSWELB3z4=" alt="Pizza" style="max-width: 200px; display: block; margin: 10px auto;">`,
+        other: `Oooh secret! 🎁<img src="https://i.pinimg.com/originals/1e/97/79/1e9779723401a29d9a3dd859d41f2ab0.gif" alt="Secret gift" style="max-width: 200px; display: block; margin: 10px auto;">`
     };
     const message = messages[amount] || "Thanks for your generosity! 🎉";
     

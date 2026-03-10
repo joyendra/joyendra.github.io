@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="qr-modal-content">
                 <button class="qr-modal-close">&times;</button>
                 <h2>Scan to Donate</h2>
-                <img src="assets/qr-code/qr-code.svg" alt="Payment QR Code" class="qr-modal-image">
+                <img src="assets/qr-code/qr-code.jpeg" alt="Payment QR Code" class="qr-modal-image">
                 <p>Total: $${totalDonated}</p>
                 <p class="text-white mt-3 small">After scanning, enter your name below to be added to our patrons list!</p>
                 <input type="text" id="patron-name-input" placeholder="Enter your name" class="form-control mb-2 mt-2" maxlength="30">

@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
-  <rect width="200" height="200" fill="#ffffff"/>
-  <path d="M20 20h40v40H20zM80 20h40v40H80zM140 20h40v40h-40zM20 80h40v40H20zM80 80h40v40H80zM140 80h40v40h-40zM20 140h40v40H20zM80 140h40v40H80zM140 140h40v40h-40z" fill="#000000"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="20" fill="#000000">Scan Me!</text>
-</svg>
