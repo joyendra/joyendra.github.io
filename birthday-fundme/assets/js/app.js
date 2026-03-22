@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     { name: 'Urvika', date: new Date().toLocaleDateString() },
     { name: 'Vridhi', date: new Date().toLocaleDateString() },
     { name: 'AR', date: new Date().toLocaleDateString() },
-    { name: 'Jayesh', date: new Date().toLocaleDateString() }
+    { name: 'Jayesh', date: new Date().toLocaleDateString() },
+    { name: 'Namita', date: new Date().toLocaleDateString() }
 ];
 
     // Initially hide the custom donation section and show donation display
