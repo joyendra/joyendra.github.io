@@ -1,7 +1,7 @@
 const liquidProgress = document.getElementById('liquid-progress');
 const progressText = document.getElementById('progress-text');
 const goalAmount = 549;
-let currentAmount = 467;
+let currentAmount = 487;
 let currentAnimation = null;
 
 function updateProgressBar(amount) {
